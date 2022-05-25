@@ -1,0 +1,47 @@
+@import 'mixins.scss';
+html,body,div { margin: 0; padding: 0;}
+#container {
+	width: 85%;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	@include centre('x');
+	
+}
+header { 
+	margin: 0;
+	padding: 0;
+	h1 {
+		margin: 0;
+		padding: 0;
+	}
+}
+.panels {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3,25vw);
+	 grid-gap: 10px;
+	 justify-content: center;
+	 align-content: end;
+	.panel {
+		text-align: center;
+		background-color: #c1c1c1;
+		padding: 20px;
+		h1 { margin: 0; padding: 0;}
+		&.inbox {
+			grid-column: 4 / 1;
+			
+		}
+		&.search {
+			grid-column: 4 / 1;
+			ul {
+				display: block;
+				list-style: none;
+				text-align: left;
+			}
+		}
+	}
+	
+}
+header.teams {
+	background-color: #333;
+	color: #fff;
+}

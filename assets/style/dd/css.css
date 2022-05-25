@@ -1,0 +1,303 @@
+/* CSS Document */
+#container {
+  text-align: center;
+  max-width: 866px;
+  width: 100vw; }
+  #container.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 0 auto; }
+  #container img {
+    display: block; }
+  #container .logo {
+    display: inline-block;
+    vertical-align: middle; }
+  #container .tl-body {
+    text-align: left;
+    width: 100vw;
+    height: 100%;
+    background-color: #333; }
+    #container .tl-body .upgrade_holder {
+      background-color: #f1f1f1;
+      width: 100vw;
+      display: inline-block;
+      float: left; }
+      #container .tl-body .upgrade_holder .upgrade {
+        border: 1px solid black;
+        width: 50%;
+        background-color: #f1f1f1; }
+        #container .tl-body .upgrade_holder .upgrade div {
+          padding: 1vw;
+          box-sizing: border-box; }
+        #container .tl-body .upgrade_holder .upgrade .name {
+          font-size: 125%;
+          width: 100%;
+          background-color: aliceblue; }
+        #container .tl-body .upgrade_holder .upgrade .meta {
+          background-color: #666;
+          padding: 0vw;
+          text-align: right; }
+    #container .tl-body .live {
+      display: inline-block; }
+      #container .tl-body .live video {
+        width: 30vw; }
+      #container .tl-body .live .console {
+        background-color: #fff;
+        height: 40vh;
+        max-width: 30vw; }
+  #container .tl-body {
+    box-sizing: content-box;
+    background-color: #fff; }
+    #container .tl-body .short {
+      width: 30vw;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+      #container .tl-body .short p {
+        text-align: left;
+        padding: 2vh; }
+    #container .tl-body a {
+      color: #000; }
+      #container .tl-body a:visited {
+        color: #000 !important; }
+  #container .tl-menu {
+    width: 100vw;
+    background-color: #333 !important;
+    border-bottom: 1px solid white; }
+    #container .tl-menu .tl-link {
+      margin: 0 1vw 0 0; }
+    #container .tl-menu a {
+      color: #fff;
+      text-decoration: none;
+      display: inline-block;
+      padding: 1vh;
+      border: 1px solid white; }
+      #container .tl-menu a:hover {
+        background-color: #fff;
+        color: #000;
+        border-color: #000; }
+      #container .tl-menu a.disabled {
+        pointer-events: none; }
+        #container .tl-menu a.disabled:hover {
+          pointer-events: none;
+          background-color: #000; }
+  #container .tl-title {
+    text-align: center !important;
+    background-color: #333;
+    width: 100vw; }
+    #container .tl-title h1 {
+      margin: 0;
+      padding: 1vh;
+      color: #fff;
+      font-size: 110%; }
+
+#upgrade_holder {
+  background-color: #fff;
+  margin-left: 4vw;
+  border-left: 1px solid black;
+  width: 40vw;
+  height: 100vh; }
+  #upgrade_holder h1, #upgrade_holder h2, #upgrade_holder h3, #upgrade_holder h4, #upgrade_holder h5, #upgrade_holder h6 {
+    padding: 0;
+    margin: 0; }
+  #upgrade_holder .upgrade {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1vh 0 1vh 0;
+    background-color: #ccc !important; }
+    #upgrade_holder .upgrade:nth-child(even) {
+      background-color: #fff !important; }
+    #upgrade_holder .upgrade h1 {
+      text-align: center;
+      font-size: 2vh;
+      border-bottom: 1px solid black; }
+    #upgrade_holder .upgrade .desc {
+      padding: 1vw;
+      border-bottom: 1px dashed black; }
+    #upgrade_holder .upgrade .voter {
+      text-align: center; }
+    #upgrade_holder .upgrade span {
+      display: block;
+      width: 100%;
+      text-align: center; }
+    #upgrade_holder .upgrade .timer {
+      width: 100%;
+      height: 12vh; }
+
+/**
+ *	This element is created inside your target element
+ *	It is used so that your own element will not need to be altered
+ **/
+.time_circles {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
+/**
+ *	This is all the elements used to house all text used
+ * in time circles
+ **/
+.time_circles > div {
+  position: absolute;
+  text-align: center; }
+
+/**
+ *	Titles (Days, Hours, etc)
+ **/
+.time_circles > div > h4 {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Century Gothic', Arial; }
+
+/**
+ *	Time numbers, ie: 12
+ **/
+.time_circles > div > span {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: 'Century Gothic', Arial;
+  font-size: 300%;
+  margin-top: 0.4em;
+  font-weight: bold; }
+
+.email {
+  background-color: #f1f1f1;
+  width: 45vw;
+  float: left;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+  .email .header {
+    background-color: #FFF4aa; }
+    .email .header h1 {
+      margin: 0;
+      text-indent: 1vw;
+      font-size: 3vh;
+      padding: 0; }
+
+#inbox {
+  font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+  width: 100%; }
+  #inbox table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left; }
+    #inbox table thead {
+      background-color: #fff;
+      border-bottom: 1px solid black; }
+    #inbox table tbody tr:nth-child(even) {
+      background-color: #fff; }
+
+.emenu {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  width: 15vw;
+  font-size: 2vh;
+  padding: 1vh;
+  text-align: center; }
+  .emenu a {
+    border-bottom: 1px solid black;
+    display: block; }
+    .emenu a:nth-child(odd) {
+      border-top: 1px solid black; }
+
+html, body {
+  font-size: 1.5vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif"; }
+  html .login, body .login {
+    background: url("/assets/imgs/webb-dark.png"), repeat; }
+
+#console {
+  font: 1.3rem Inconsolata, monospace;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: left;
+  padding: 10px;
+  background: #fff;
+  height: 300px;
+  width: 70vw;
+  border: 1px solid #a7a7a7;
+  overflow: auto;
+  border-radius: 4px;
+  border-bottom: 4px solid #a7a7a7; }
+  #console .loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  #console .msg {
+    display: block;
+    padding: 0;
+    box-sizing: border-box; }
+    #console .msg:nth-child(odd) {
+      background-color: #f1f1f1;
+      border-bottom: 1px solid black;
+      border-top: 1px dashed black; }
+    #console .msg .date, #console .msg .body {
+      display: inline-block; }
+    #console .msg .date {
+      width: 19% !important; }
+    #console .msg .body {
+      margin-left: 1vh; }
+
+.dd_submit {
+  width: 15vw !important;
+  outline: dotted;
+  outline-color: #333;
+  margin: 1vh 0 1vh 0;
+  border: 1px double #333; }
+
+.dd_login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #111;
+  width: 20vw;
+  border: 2px inset #ccc;
+  box-shadow: 0px 0 10px 15px #111;
+  padding: 1vh 0 4vh 0; }
+  .dd_login table {
+    width: 100%; }
+    .dd_login table th {
+      color: #fff; }
+  .dd_login input {
+    box-sizing: border-box;
+    width: 15vw; }
+
+.el-bord {
+  /* We're picking out a colour from the background image we're using but you can use any colour you'd like */
+  border-size: calc(100%+1px);
+  border-style: groove; }

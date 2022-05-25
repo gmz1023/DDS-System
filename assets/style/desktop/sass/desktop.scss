@@ -1,0 +1,196 @@
+/* CSS Document */
+$hotbar : #6c6c6c;
+$base-color: #bdbdbd;
+* { box-sizing: border-box;}
+#container {
+	.deskcon {
+		width: 100%;
+		height: 100%;
+		background: #007CC8;
+	}
+	background: #000;
+	height: 100vh;
+	width: 100vw;
+ 	position:absolute;
+	.bootloader {
+		position: absolute;
+		top:0;
+		left: 0;
+		font-family: termina, sans-serif;
+		font-weight: 400;
+		font-style: normal;
+		font-size: .75rem;
+		width: 100%;
+		height: 100vh;
+		background-color:#000;
+		color: green;
+		padding: 5%;
+		.sequence {
+			position:relative;
+			top: 10px;
+			line-height:23px;
+		}
+	}
+}
+#loaded {
+	@include center-xy();
+	width: 25vw;
+	height: 25vh;
+}
+#desktop {
+	overflow: hidden;
+	background: linear-gradient(0deg, rgba(
+               32, 98, 167, .1), rgba(
+                  6, 125, 249, 0.24)),url("../../../imgs/coeus_os_1.png") 
+		center no-repeat;
+	position: absolute;
+	top:4vh;
+	height: 96vh;
+	width: 100%;
+}
+.popup {
+
+}
+
+.item {
+  
+	float: left;
+  	position: absolute;
+	bottom: 0;
+	width: 100px;
+  	height: 152px;
+  //padding: 20px;
+  	margin-right: 50px;
+  	margin-bottom: 70px;
+  	border-radius: 2px;
+  //overflow: hidden;
+  	cursor: pointer;
+	padding-bottom: 50px;
+	&.short {
+		a {
+			display: inline-block;
+			text-overflow: ellipsis;
+			max-width: 3rem;
+			max-height: 1rem;
+		}
+		&:hover{
+			a {
+				overflow:visible;
+				width: 100%;
+			}
+		}
+		
+	}
+		text-transform: capitalize;
+		position:relative;
+		top: 4vh;
+		left: 1vw;
+		width: 10%;
+		height: 10%;
+		text-align: center;
+	span {
+		text-align: center;
+		font-size:3rem;
+		display: block;
+	}
+	a {
+		font-size: 1rem}
+	}
+
+#htbar {
+	position: absolute;
+	z-index: 1000;
+	color: #fff;
+	border-bottom: 1px groove #333;
+	height: 4vh;
+	width:100vw;
+	background-color:$hotbar;
+	.hstation
+	{
+		margin: 0;
+		padding:0;
+		height: 100%;
+		box-sizing: border-box;
+		display:inline-block;
+		width: 5%;
+		line-height: 4vh;
+		text-align:center;
+		&.wtspc {
+		}
+		&.dock {
+			border:2px inset black;
+			float: right;
+		}
+		&.home,&.prog {
+			color: #fff;
+			background-color:darken($hotbar,15%);
+			&:hover {
+				background-color: invert(darken($hotbar,15%));
+			}
+		}
+		&.drop {
+			&.active {
+				display:table;
+			}
+			display: none;
+			width: 14vw;
+			height: 100%;
+			background-color:lighten($hotbar,15%) !important;
+			.mitem {
+				display: table-row;
+				width: 100%;
+				text-align: center;
+				&:hover {
+				background-color:lighten($hotbar,25%) !important;
+				}
+			}
+			.mitem-cont {
+				display: table-cell;
+				border-bottom:1px solid black;
+			}
+		}
+	}
+}
+#stats {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+		.statistics {
+			width: 100%;
+			thead { 
+				background-color: #333;
+				color: #fff;
+				th {
+					padding: 10px;
+					font-weight: bold;
+				}
+			}
+			tr {
+				td { padding: 5px;}
+				&:nth-child(2n+2) { 
+					background-color:#ccc;
+					border-top: 1px dashed black;
+				}
+			}
+			.stat_name { 
+				font-weight: bold;
+			}
+	}
+}
+.ddinfo {
+	padding: 10px;
+	section {
+		border-bottom: 1px solid grey;
+		margin: 10px;
+	h1 {
+		border-bottom: 1px dashed black;
+		font-size: 2em;
+		padding: 15px 0 15px 0;
+	}
+	p {
+		line-height: 1.75em;
+		padding: 10px 0 10px 0;;
+	}
+	}
+}
+

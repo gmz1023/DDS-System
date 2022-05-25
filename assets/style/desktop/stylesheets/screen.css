@@ -1,0 +1,1353 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500");
+/* line 3, ../sass/keyframes.scss */
+.glitch {
+  position: relative;
+  margin: 0 auto;
+  background: #4242e6;
+}
+
+/* line 9, ../sass/keyframes.scss */
+.glitch::before,
+.glitch::after {
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate-reverse;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  clip: rect(0, 900px, 0, 0);
+  content: attr(data-text);
+}
+
+/* line 21, ../sass/keyframes.scss */
+.glitch::after {
+  animation-name: glitch-animation;
+  animation-duration: 4s;
+  left: 4px;
+  text-shadow: -1px 0 #ffa800;
+  background: #4242e6;
+}
+
+/* line 29, ../sass/keyframes.scss */
+.glitch::before {
+  animation-name: glitch-animation-2;
+  animation-duration: 6s;
+  left: -4px;
+  text-shadow: 1px 0 #00d8ff;
+  background: #4242e6;
+}
+
+/* Expanded Animations */
+@keyframes glitch-animation {
+  0% {
+    clip: rect(42px, 9999px, 44px, 0);
+  }
+  5% {
+    clip: rect(12px, 9999px, 59px, 0);
+  }
+  10% {
+    clip: rect(48px, 9999px, 29px, 0);
+  }
+  15.0% {
+    clip: rect(42px, 9999px, 73px, 0);
+  }
+  20% {
+    clip: rect(63px, 9999px, 27px, 0);
+  }
+  25% {
+    clip: rect(34px, 9999px, 55px, 0);
+  }
+  30.0% {
+    clip: rect(86px, 9999px, 73px, 0);
+  }
+  35% {
+    clip: rect(20px, 9999px, 20px, 0);
+  }
+  40% {
+    clip: rect(26px, 9999px, 60px, 0);
+  }
+  45% {
+    clip: rect(25px, 9999px, 66px, 0);
+  }
+  50% {
+    clip: rect(57px, 9999px, 98px, 0);
+  }
+  55.0% {
+    clip: rect(5px, 9999px, 46px, 0);
+  }
+  60.0% {
+    clip: rect(82px, 9999px, 31px, 0);
+  }
+  65% {
+    clip: rect(54px, 9999px, 27px, 0);
+  }
+  70% {
+    clip: rect(28px, 9999px, 99px, 0);
+  }
+  75% {
+    clip: rect(45px, 9999px, 69px, 0);
+  }
+  80% {
+    clip: rect(23px, 9999px, 85px, 0);
+  }
+  85.0% {
+    clip: rect(54px, 9999px, 84px, 0);
+  }
+  90% {
+    clip: rect(45px, 9999px, 47px, 0);
+  }
+  95% {
+    clip: rect(37px, 9999px, 20px, 0);
+  }
+  100% {
+    clip: rect(4px, 9999px, 91px, 0);
+  }
+}
+@keyframes glitch-animation-2 {
+  0% {
+    clip: rect(65px, 9999px, 100px, 0);
+  }
+  5% {
+    clip: rect(52px, 9999px, 74px, 0);
+  }
+  10% {
+    clip: rect(79px, 9999px, 85px, 0);
+  }
+  15.0% {
+    clip: rect(75px, 9999px, 5px, 0);
+  }
+  20% {
+    clip: rect(67px, 9999px, 61px, 0);
+  }
+  25% {
+    clip: rect(14px, 9999px, 79px, 0);
+  }
+  30.0% {
+    clip: rect(1px, 9999px, 66px, 0);
+  }
+  35% {
+    clip: rect(86px, 9999px, 30px, 0);
+  }
+  40% {
+    clip: rect(23px, 9999px, 98px, 0);
+  }
+  45% {
+    clip: rect(85px, 9999px, 72px, 0);
+  }
+  50% {
+    clip: rect(71px, 9999px, 75px, 0);
+  }
+  55.0% {
+    clip: rect(2px, 9999px, 48px, 0);
+  }
+  60.0% {
+    clip: rect(30px, 9999px, 16px, 0);
+  }
+  65% {
+    clip: rect(59px, 9999px, 50px, 0);
+  }
+  70% {
+    clip: rect(41px, 9999px, 62px, 0);
+  }
+  75% {
+    clip: rect(2px, 9999px, 82px, 0);
+  }
+  80% {
+    clip: rect(47px, 9999px, 73px, 0);
+  }
+  85.0% {
+    clip: rect(3px, 9999px, 27px, 0);
+  }
+  90% {
+    clip: rect(26px, 9999px, 55px, 0);
+  }
+  95% {
+    clip: rect(42px, 9999px, 97px, 0);
+  }
+  100% {
+    clip: rect(38px, 9999px, 49px, 0);
+  }
+}
+@keyframes scale {
+  from {
+    width: 200px;
+  }
+  to {
+    width: 1050px;
+  }
+}
+@-moz-keyframes scale {
+  /* Firefox */
+  from {
+    width: 200px;
+  }
+  to {
+    width: 50px;
+  }
+}
+@-webkit-keyframes scale {
+  /* Safari and Chrome */
+  from {
+    width: 200px;
+  }
+  to {
+    width: 50px;
+  }
+}
+@-o-keyframes scale {
+  /* Opera */
+  from {
+    width: 200px;
+  }
+  to {
+    width: 50px;
+  }
+}
+/* CSS Document */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink-caret {
+  animation-iteration-count: 1;
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+/* line 5, D:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, D:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, D:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, D:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, D:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, D:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, D:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, D:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, D:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* CSS Document */
+/* line 2, ../sass/base.scss */
+.collapse {
+  display: none !important;
+}
+
+/* line 3, ../sass/base.scss */
+.terminal {
+  width: 20vw;
+}
+
+/* line 7, ../sass/base.scss */
+.term p {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em;
+  /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* line 18, ../sass/base.scss */
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+     supported by Chrome, Edge, Opera and Firefox */
+}
+
+/* CSS Document */
+/* line 4, ../sass/desktop.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 5, ../sass/desktop.scss */
+#container {
+  background: #000;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+}
+/* line 6, ../sass/desktop.scss */
+#container .deskcon {
+  width: 100%;
+  height: 100%;
+  background: #007CC8;
+}
+/* line 15, ../sass/desktop.scss */
+#container .bootloader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: termina, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: .75rem;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  color: green;
+  padding: 5%;
+}
+/* line 28, ../sass/desktop.scss */
+#container .bootloader .sequence {
+  position: relative;
+  top: 10px;
+  line-height: 23px;
+}
+
+/* line 35, ../sass/desktop.scss */
+#loaded {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25vw;
+  height: 25vh;
+}
+
+/* line 40, ../sass/desktop.scss */
+#desktop {
+  overflow: hidden;
+  background: linear-gradient(0deg, rgba(32, 98, 167, 0.1), rgba(6, 125, 249, 0.24)), url("../../../imgs/coeus_os_1.png") center no-repeat;
+  position: absolute;
+  top: 4vh;
+  height: 96vh;
+  width: 100%;
+}
+
+/* line 55, ../sass/desktop.scss */
+.item {
+  float: left;
+  position: absolute;
+  bottom: 0;
+  width: 100px;
+  height: 152px;
+  margin-right: 50px;
+  margin-bottom: 70px;
+  border-radius: 2px;
+  cursor: pointer;
+  padding-bottom: 50px;
+  text-transform: capitalize;
+  position: relative;
+  top: 4vh;
+  left: 1vw;
+  width: 10%;
+  height: 10%;
+  text-align: center;
+}
+/* line 70, ../sass/desktop.scss */
+.item.short a {
+  display: inline-block;
+  text-overflow: ellipsis;
+  max-width: 3rem;
+  max-height: 1rem;
+}
+/* line 77, ../sass/desktop.scss */
+.item.short:hover a {
+  overflow: visible;
+  width: 100%;
+}
+/* line 91, ../sass/desktop.scss */
+.item span {
+  text-align: center;
+  font-size: 3rem;
+  display: block;
+}
+/* line 96, ../sass/desktop.scss */
+.item a {
+  font-size: 1rem;
+}
+
+/* line 100, ../sass/desktop.scss */
+#htbar {
+  position: absolute;
+  z-index: 1000;
+  color: #fff;
+  border-bottom: 1px groove #333;
+  height: 4vh;
+  width: 100vw;
+  background-color: #6c6c6c;
+}
+/* line 108, ../sass/desktop.scss */
+#htbar .hstation {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 5%;
+  line-height: 4vh;
+  text-align: center;
+}
+/* line 120, ../sass/desktop.scss */
+#htbar .hstation.dock {
+  border: 2px inset black;
+  float: right;
+}
+/* line 124, ../sass/desktop.scss */
+#htbar .hstation.home, #htbar .hstation.prog {
+  color: #fff;
+  background-color: #464646;
+}
+/* line 127, ../sass/desktop.scss */
+#htbar .hstation.home:hover, #htbar .hstation.prog:hover {
+  background-color: #b9b9b9;
+}
+/* line 131, ../sass/desktop.scss */
+#htbar .hstation.drop {
+  display: none;
+  width: 14vw;
+  height: 100%;
+  background-color: #929292 !important;
+}
+/* line 132, ../sass/desktop.scss */
+#htbar .hstation.drop.active {
+  display: table;
+}
+/* line 139, ../sass/desktop.scss */
+#htbar .hstation.drop .mitem {
+  display: table-row;
+  width: 100%;
+  text-align: center;
+}
+/* line 143, ../sass/desktop.scss */
+#htbar .hstation.drop .mitem:hover {
+  background-color: #acacac !important;
+}
+/* line 147, ../sass/desktop.scss */
+#htbar .hstation.drop .mitem-cont {
+  display: table-cell;
+  border-bottom: 1px solid black;
+}
+
+/* line 154, ../sass/desktop.scss */
+#stats {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+/* line 158, ../sass/desktop.scss */
+#stats .statistics {
+  width: 100%;
+}
+/* line 160, ../sass/desktop.scss */
+#stats .statistics thead {
+  background-color: #333;
+  color: #fff;
+}
+/* line 163, ../sass/desktop.scss */
+#stats .statistics thead th {
+  padding: 10px;
+  font-weight: bold;
+}
+/* line 169, ../sass/desktop.scss */
+#stats .statistics tr td {
+  padding: 5px;
+}
+/* line 170, ../sass/desktop.scss */
+#stats .statistics tr:nth-child(2n+2) {
+  background-color: #ccc;
+  border-top: 1px dashed black;
+}
+/* line 175, ../sass/desktop.scss */
+#stats .statistics .stat_name {
+  font-weight: bold;
+}
+
+/* line 180, ../sass/desktop.scss */
+.ddinfo {
+  padding: 10px;
+}
+/* line 182, ../sass/desktop.scss */
+.ddinfo section {
+  border-bottom: 1px solid grey;
+  margin: 10px;
+}
+/* line 185, ../sass/desktop.scss */
+.ddinfo section h1 {
+  border-bottom: 1px dashed black;
+  font-size: 2em;
+  padding: 15px 0 15px 0;
+}
+/* line 190, ../sass/desktop.scss */
+.ddinfo section p {
+  line-height: 1.75em;
+  padding: 10px 0 10px 0;
+}
+
+/* line 1, ../sass/inbox.scss */
+.txtcen {
+  text-align: center;
+}
+
+/* line 4, ../sass/inbox.scss */
+.email-container {
+  font-family: roboto-slab, serif;
+  font-weight: 400;
+  font-style: normal;
+  overflow-y: scroll !important;
+  box-sizing: border-box;
+  background-color: #fff;
+  width: 100%;
+  height: 93%;
+}
+/* line 13, ../sass/inbox.scss */
+.email-container .single {
+  width: 100%;
+}
+/* line 15, ../sass/inbox.scss */
+.email-container .single thead {
+  height: 8vh;
+}
+/* line 18, ../sass/inbox.scss */
+.email-container .single thead th {
+  border-bottom: 1px solid #d4d0c6;
+}
+/* line 20, ../sass/inbox.scss */
+.email-container .single thead th:first-child {
+  text-align: center;
+  width: 10%;
+  height: 50%;
+}
+/* line 27, ../sass/inbox.scss */
+.email-container .single tbody {
+  margin: 1vw;
+  height: 63vh;
+}
+/* line 30, ../sass/inbox.scss */
+.email-container .single tbody td {
+  height: 100%;
+  width: 100%;
+}
+/* line 31, ../sass/inbox.scss */
+.email-container .single tbody td.body {
+  padding: 3%;
+}
+/* line 36, ../sass/inbox.scss */
+.email-container .single tbody td div {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* line 41, ../sass/inbox.scss */
+.email-container .single tbody td div p {
+  line-height: 1.5rem;
+}
+/* line 48, ../sass/inbox.scss */
+.email-container .inbox {
+  margin: 0 auto;
+  overflow-y: scroll !important;
+  height: 93%;
+  box-sizing: border-box;
+  width: 100%;
+  border-collapse: collapse;
+}
+/* line 57, ../sass/inbox.scss */
+.email-container .inbox thead th {
+  position: sticky;
+  top: 0;
+  padding: 1%;
+  background: #f0f0e5;
+  color: #726f66;
+  height: 1vw;
+  text-align: center;
+  border-bottom: 1px solid #d4d0c6;
+}
+/* line 68, ../sass/inbox.scss */
+.email-container .inbox tbody {
+  overflow: scroll;
+}
+/* line 70, ../sass/inbox.scss */
+.email-container .inbox tbody td {
+  padding: 3px;
+  height: 10px;
+  text-align: center;
+  border-bottom: 1px solid #d4d0c6;
+}
+/* line 75, ../sass/inbox.scss */
+.email-container .inbox tbody td.middle {
+  text-align: left;
+}
+
+/* line 3, ../sass/login.scss */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-weight: normal;
+  margin: 0;
+  outline: 0 none;
+  font-family: "Open Sans";
+  padding: 0;
+}
+
+/* line 13, ../sass/login.scss */
+#login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(#010101, #222);
+  border: 4px #232121 groove;
+  box-shadow: 0 20px 25px 10px #050505, 0 -25px 20px 15px #060606;
+}
+
+/* line 21, ../sass/login.scss */
+body {
+  background-color: #000;
+  font-family: "Open Sans";
+}
+
+/* line 25, ../sass/login.scss */
+#welcomebanner {
+  position: absolute;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  color: green;
+}
+/* line 32, ../sass/login.scss */
+#welcomebanner h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+}
+
+/* line 37, ../sass/login.scss */
+.loading {
+  position: relative;
+  width: 10vw;
+  margin: 0 auto;
+}
+/* line 41, ../sass/login.scss */
+.loading img {
+  filter: invert(100%);
+  width: 100%;
+}
+
+/* line 47, ../sass/login.scss */
+.login {
+  width: 300px;
+  margin: 0 auto;
+}
+
+/* line 51, ../sass/login.scss */
+.login form {
+  width: 100%;
+}
+
+/* line 54, ../sass/login.scss */
+input {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 4px 4px 4px 4px;
+  box-shadow: 0 -5px 45px rgba(100, 100, 100, 0.2) inset, 0 1px 1px rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  font-size: 13px;
+  margin-bottom: 10px;
+  outline: medium none;
+  padding: 10px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+
+/* line 68, ../sass/login.scss */
+button {
+  background: linear-gradient(to bottom, #009EFF 0px, #0075BC 100%) repeat scroll 0 0 transparent;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.55);
+  border-radius: 6px 6px 6px 6px;
+  box-shadow: 0 1px 0 #E6F5FF inset;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  padding: 10px 25px;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+
+/* line 1, ../sass/window.scss */
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid white;
+  z-index: 9999999;
+  width: 60%;
+  height: 80%;
+}
+
+/* line 17, ../sass/window.scss */
+.explorer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 7px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  box-shadow: 0 0px 55px 6px rgba(0, 0, 0, 0.18);
+}
+/* line 27, ../sass/window.scss */
+.explorer .left {
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  overflow: hidden;
+}
+/* line 32, ../sass/window.scss */
+.explorer .left .blurred {
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  background-size: cover;
+  filter: blur(10px);
+  z-index: 1;
+  margin: -5px -10px -10px -5px;
+}
+/* line 42, ../sass/window.scss */
+.explorer .left .top {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: linear-gradient(rgba(77, 65, 102, 0.95), rgba(64, 56, 89, 0.9), rgba(77, 65, 102, 0.93));
+}
+/* line 50, ../sass/window.scss */
+.explorer .left .top .navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5vh;
+  padding-left: 2vh;
+  padding-top: 1vh;
+}
+/* line 58, ../sass/window.scss */
+.explorer .left .top .navigation .lab {
+  position: relative;
+  display: inline-block;
+  width: 3vh;
+  height: 3vh;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-right: 6%;
+  text-align: center;
+}
+/* line 67, ../sass/window.scss */
+.explorer .left .top .navigation .lab:active {
+  background: rgba(255, 255, 255, 0.05);
+}
+/* line 70, ../sass/window.scss */
+.explorer .left .top .navigation .lab .material-icons {
+  font-size: 2vh;
+  line-height: 3vh;
+  color: rgba(255, 255, 255, 0.9);
+}
+/* line 77, ../sass/window.scss */
+.explorer .left .top .folders {
+  margin-top: 5vh;
+  width: 100%;
+  height: 82%;
+}
+/* line 81, ../sass/window.scss */
+.explorer .left .top .folders ul {
+  font-weight: 300;
+  list-style: none;
+  padding: 2vh;
+}
+/* line 85, ../sass/window.scss */
+.explorer .left .top .folders ul li {
+  color: white;
+  font-size: 1.6vh;
+  padding: 1vh 0.5vh;
+  cursor: pointer;
+  border-radius: 3px;
+  font-weight: 400;
+}
+/* line 93, ../sass/window.scss */
+.explorer .left .top .folders ul li .lab-accor {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+/* line 98, ../sass/window.scss */
+.explorer .left .top .folders ul li .lab-accor .arrow-accor {
+  position: absolute;
+  right: 1.5vh;
+  transition: transform 0.5s;
+}
+/* line 104, ../sass/window.scss */
+.explorer .left .top .folders ul li .material-icons {
+  font-size: 2vh;
+  padding-right: 2.7vh;
+}
+/* line 108, ../sass/window.scss */
+.explorer .left .top .folders ul li:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+/* line 112, ../sass/window.scss */
+.explorer .left .top .folders ul ul {
+  height: 0px;
+  transition: height 0.3s;
+  padding: 0.5vh 4vh;
+  overflow: hidden;
+}
+/* line 117, ../sass/window.scss */
+.explorer .left .top .folders ul ul .active {
+  color: #00B1FF;
+  font-weight: 500;
+}
+/* line 120, ../sass/window.scss */
+.explorer .left .top .folders ul ul .active:after {
+  content: '';
+  display: inline-block;
+  background: #00B1FF;
+  width: 0.2vh;
+  height: 1.7vh;
+  float: left;
+  margin-left: -3vh;
+  margin-top: 0.1vh;
+}
+/* line 134, ../sass/window.scss */
+.explorer .left .top .folder-info {
+  position: relative;
+  width: 100%;
+  height: calc(18% - 5vh);
+}
+/* line 138, ../sass/window.scss */
+.explorer .left .top .folder-info .foldercap {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  padding-top: 1vh;
+}
+/* line 143, ../sass/window.scss */
+.explorer .left .top .folder-info .foldercap span {
+  color: white;
+  font-weight: 300;
+  font-size: 1.4vh;
+}
+/* line 148, ../sass/window.scss */
+.explorer .left .top .folder-info .foldercap .left-si {
+  position: absolute;
+  left: 0;
+}
+/* line 152, ../sass/window.scss */
+.explorer .left .top .folder-info .foldercap .right-si {
+  position: absolute;
+  right: 0;
+}
+/* line 157, ../sass/window.scss */
+.explorer .left .top .folder-info .full-container {
+  position: absolute;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 80%;
+  height: 6px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.09);
+  overflow: hidden;
+}
+/* line 165, ../sass/window.scss */
+.explorer .left .top .folder-info .full-container .full-stat {
+  border-radius: 10px;
+  position: absolute;
+  height: 100%;
+  background: #00B1FF;
+  animation: bounce 1s forwards 0.2s ease-in-out;
+}
+/* line 177, ../sass/window.scss */
+.explorer .explorer-space {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  padding-right: 1vw;
+}
+/* line 183, ../sass/window.scss */
+.explorer .explorer-space .status {
+  position: relative;
+  width: 100%;
+  height: 7%;
+  padding-left: 1vh;
+  border-bottom: 1px solid #dbd2cb;
+}
+/* line 189, ../sass/window.scss */
+.explorer .explorer-space .status .tab {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  margin: 1.1vh;
+  padding-right: 1.8vh;
+  font-size: 1.8vh;
+  font-weight: 400;
+  color: #999;
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+}
+/* line 199, ../sass/window.scss */
+.explorer .explorer-space .status .tab i {
+  margin-right: 1.3vh;
+  font-size: 2.5vh;
+  display: inline-flex;
+  vertical-align: middle;
+}
+/* line 205, ../sass/window.scss */
+.explorer .explorer-space .status .tab .closetab {
+  color: #ccc;
+  font-size: 2vh;
+  margin-right: 0;
+  margin-left: 2vh;
+}
+/* line 212, ../sass/window.scss */
+.explorer .explorer-space .status .active {
+  color: #00B1FF;
+  font-weight: 500;
+}
+/* line 216, ../sass/window.scss */
+.explorer .explorer-space .status .add-tab {
+  display: inline-flex;
+  vertical-align: middle;
+}
+/* line 219, ../sass/window.scss */
+.explorer .explorer-space .status .add-tab i {
+  color: #ccc;
+  font-size: 1.7vh;
+}
+/* line 224, ../sass/window.scss */
+.explorer .explorer-space .status .bar-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1.2vh 1.5vh;
+}
+/* line 229, ../sass/window.scss */
+.explorer .explorer-space .status .bar-button .resize {
+  font-size: 1.5vh;
+}
+/* line 232, ../sass/window.scss */
+.explorer .explorer-space .status .bar-button i {
+  padding-left: 1vh;
+  padding-right: 1vh;
+  font-size: 1.7vh;
+  font-weight: 500;
+  color: #999;
+  cursor: pointer;
+}
+/* line 240, ../sass/window.scss */
+.explorer .explorer-space .status .bar-button .close-icon:hover {
+  color: #ff4d4d;
+}
+/* line 245, ../sass/window.scss */
+.explorer .explorer-space .file-space {
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding-left: 2vh;
+  padding-top: 2vh;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  height: 80%;
+}
+/* line 254, ../sass/window.scss */
+.explorer .explorer-space .file-space .folder-icon {
+  position: relative;
+  float: left;
+  width: 6vh;
+  height: auto;
+  margin-right: 2vh;
+  margin-bottom: 1vh;
+  border-radius: 4px;
+  text-align: center;
+  cursor: default;
+}
+/* line 264, ../sass/window.scss */
+.explorer .explorer-space .file-space .folder-icon:hover {
+  background: rgba(0, 177, 255, 0.1);
+}
+/* line 268, ../sass/window.scss */
+.explorer .explorer-space .file-space .folder-icon i {
+  color: #ffbf00;
+  font-size: 4vh;
+  display: block;
+}
+/* line 273, ../sass/window.scss */
+.explorer .explorer-space .file-space .folder-icon span {
+  font-size: 1.4vh;
+  color: #333;
+  word-wrap: break-word;
+}
+/* line 280, ../sass/window.scss */
+.explorer .explorer-space .bottominfo {
+  border-top: 1px solid #dbd2cb;
+  width: 100%;
+  height: 8vh;
+  position: absolute;
+  bottom: 0;
+  background: #EEE;
+}
+
+/* line 290, ../sass/window.scss */
+.security {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+/* line 295, ../sass/window.scss */
+.security form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* CSS Document */
+/* line 2, ../sass/redesign.scss */
+body {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  overflow: hidden;
+}
+
+/* line 8, ../sass/redesign.scss */
+#welcome {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background: #000;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2000;
+  color: green;
+}
+/* line 18, ../sass/redesign.scss */
+#welcome h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* line 23, ../sass/redesign.scss */
+#start_menu {
+  display: flex;
+  flex-direction: row;
+  background-color: #c1c1c1;
+}
+/* line 27, ../sass/redesign.scss */
+#start_menu .menu {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 95vw;
+  overflow: hidden;
+  background-color: darkblue;
+}
+/* line 35, ../sass/redesign.scss */
+#start_menu .menu li {
+  padding: 0;
+  margin: 0;
+  background-color: #c1c1c1;
+  display: inline-block;
+  height: 4vh;
+  width: 10%;
+  box-sizing: border-box;
+}
+/* line 43, ../sass/redesign.scss */
+#start_menu .menu li a {
+  text-align: center;
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 4vh;
+  font-size: 1rem;
+}
+/* line 50, ../sass/redesign.scss */
+#start_menu .menu li a:hover {
+  background-color: lime;
+}
+/* line 56, ../sass/redesign.scss */
+#start_menu .hotbar {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 5vw;
+  background-color: purple;
+  overflow: hidden;
+  line-height: 4vh;
+}
+
+/* line 65, ../sass/redesign.scss */
+#clock {
+  overflow: hidden;
+  font-size: .75rem;
+  width: 10vw !important;
+}
+/* line 68, ../sass/redesign.scss */
+#clock div {
+  width: 50;
+  display: inline-block;
+}
+
+/* line 1, ../sass/notepad.scss */
+.explorer {
+  margin: 0 auto;
+}
+/* line 5, ../sass/notepad.scss */
+.explorer .file-space.corrupt h1 {
+  text-align: center;
+  font-size: 150%;
+  display: block;
+  width: 100%;
+}
+/* line 12, ../sass/notepad.scss */
+.explorer .file-space.corrupt p {
+  padding: 1vw;
+}
+/* line 20, ../sass/notepad.scss */
+.explorer.notepad-container textarea {
+  height: 93%;
+  width: 100%;
+  resize: none;
+}
+/* line 27, ../sass/notepad.scss */
+.explorer.video-container video {
+  height: 100%;
+  width: 100%;
+}
+/* line 31, ../sass/notepad.scss */
+.explorer.video-container audio {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* line 36, ../sass/notepad.scss */
+.explorer.photo-container {
+  overflow: scroll;
+}
+/* line 38, ../sass/notepad.scss */
+.explorer.photo-container img {
+  margin: 0;
+  height: auto;
+  width: 100%;
+}
+/* line 45, ../sass/notepad.scss */
+.explorer.upgrade-container .pre-tabs {
+  background: #dbd2cb;
+  height: 4vh;
+  width: 100%;
+}
+/* line 49, ../sass/notepad.scss */
+.explorer.upgrade-container .pre-tabs a {
+  box-sizing: border-box;
+  line-height: 4vh;
+  width: 20%;
+  text-align: center;
+  display: inline-block;
+  margin-right: 1vw;
+  border: 1px solid black;
+}
+/* line 59, ../sass/notepad.scss */
+.explorer.upgrade-container .infotab {
+  display: none;
+}
+/* line 61, ../sass/notepad.scss */
+.explorer.upgrade-container .infotab.inuse {
+  display: block;
+}
+
+/* line 66, ../sass/notepad.scss */
+#console {
+  width: 100%;
+  padding: 1em;
+  height: 98%;
+  background-color: #000;
+  color: #00BB55;
+  overflow: scroll;
+}
+/* line 73, ../sass/notepad.scss */
+#console .loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* line 76, ../sass/notepad.scss */
+#console .msg {
+  border-bottom: 1px solid black;
+}
+/* line 78, ../sass/notepad.scss */
+#console .msg div {
+  display: inline-block;
+  padding: 1vh;
+}
+/* line 82, ../sass/notepad.scss */
+#console .msg .date {
+  width: 33%;
+}
+
+/* CSS Document */
+/* line 2, ../sass/upgrade.scss */
+#upgrade_holder {
+  display: flex;
+  overflow-y: scroll;
+  flex-flow: row wrap;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 9, ../sass/upgrade.scss */
+.upgrade {
+  border: 1px solid grey;
+  flex: 2;
+  margin: 6px;
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+  overflow-y: hidden;
+  box-sizing: border-box;
+}
+/* line 18, ../sass/upgrade.scss */
+.upgrade h1 {
+  font-size: 1.25em;
+  text-align: center;
+  border-bottom: 1px dashed grey;
+  padding: 6px;
+}
+/* line 24, ../sass/upgrade.scss */
+.upgrade .desc, .upgrade .voter {
+  align-items: stretch;
+}
+/* line 28, ../sass/upgrade.scss */
+.upgrade .desc {
+  flex: 4;
+}
+/* line 30, ../sass/upgrade.scss */
+.upgrade .desc p {
+  overflow-y: scroll;
+  display: block;
+  padding: 1vw;
+}
+/* line 36, ../sass/upgrade.scss */
+.upgrade .voter {
+  flex: 1;
+  align-items: center;
+  position: relative;
+  bottom: 0;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+/* line 44, ../sass/upgrade.scss */
+.upgrade .voter button {
+  display: block;
+  display: inline-block;
+  width: 50%;
+}
+/* line 52, ../sass/upgrade.scss */
+.upgrade.warning p {
+  overflow-y: hidden !important;
+}
+
+/* CSS Document */

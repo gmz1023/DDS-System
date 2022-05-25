@@ -1,0 +1,9 @@
+<xml>
+	<menu name='dd'>
+		<item level='0' name='Home' href='index.php' disabled='0'/>
+		<item level='0' name='Console' href='?m=console' disabled='0'/> 
+		<item level='0' name='System' href='?m=system' disabled='0'/> 
+		<item level='0' name='Settings' href='?m=settings' disabled='0'/>
+		<item level='9' name='Super Secret Settings' href='index.php' /> 
+	</menu>
+</xml>

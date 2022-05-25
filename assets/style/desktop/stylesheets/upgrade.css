@@ -1,0 +1,62 @@
+/* CSS Document */
+/* line 2, ../sass/upgrade.scss */
+#upgrade_holder {
+  display: flex;
+  overflow-y: scroll;
+  flex-flow: row wrap;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 9, ../sass/upgrade.scss */
+.upgrade {
+  border: 1px solid grey;
+  flex: 2;
+  margin: 6px;
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+  overflow-y: hidden;
+  box-sizing: border-box;
+}
+/* line 18, ../sass/upgrade.scss */
+.upgrade h1 {
+  font-size: 1.25em;
+  text-align: center;
+  border-bottom: 1px dashed grey;
+  padding: 6px;
+}
+/* line 24, ../sass/upgrade.scss */
+.upgrade .desc, .upgrade .voter {
+  align-items: stretch;
+}
+/* line 28, ../sass/upgrade.scss */
+.upgrade .desc {
+  flex: 4;
+}
+/* line 30, ../sass/upgrade.scss */
+.upgrade .desc p {
+  overflow-y: scroll;
+  display: block;
+  padding: 1vw;
+}
+/* line 36, ../sass/upgrade.scss */
+.upgrade .voter {
+  flex: 1;
+  align-items: center;
+  position: relative;
+  bottom: 0;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+/* line 44, ../sass/upgrade.scss */
+.upgrade .voter button {
+  display: block;
+  display: inline-block;
+  width: 50%;
+}
+/* line 52, ../sass/upgrade.scss */
+.upgrade.warning p {
+  overflow-y: hidden !important;
+}

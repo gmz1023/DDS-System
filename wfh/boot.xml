@@ -1,0 +1,26 @@
+<xml>
+	<item txt='[ OK ] Telling WATSON what it is' t='2000' repeat='0' />
+	<item txt='DETECTING ORPHAN NODES' t='1500' repeat='0' />
+	<item txt='_NUM_ ORPHAN NODES DETECTED' t='500' repeat='0' />
+	<item txt='[ ERROR ] This is a typewriter' t='500' repeat='0' />
+	<item txt='CLEARING ORPHAN NODES' t='1500' repeat='0' />
+	<item txt='Booting into ASLO-SECURT Network' t='1000' repeat='0'/>
+	<item txt='MOUNTING COEUS OS' t='1500' repeat='0' />
+	<item txt='MOUNT SUCCESSFULL' t='2500' repeat='0' />
+	<item txt='[ ERROR ] Unable to locate self' t='500' repeat='0' />
+	<item txt='[ OK ] Boot Successful' t='250' repeat='0'/>
+	<item txt='Locating System Files' t='250' repeat='0'/>
+	<item txt='[ ERROR ] System File Awareness Error x401_T' t='500' repeat='0' />
+	<item txt='[ ERROR ] System File Awareness Error x391_T' t='500' repeat='0' />
+	<item txt='[ ERROR ] System File Awareness Error x671_P' t='500' repeat='0' />
+	<item txt='[ ERROR ] System File Awareness Error x227_P' t='500' repeat='0' />
+	<item txt='[ WARNING ] Subsystem _SUBSYSTEM_ Out of Date, please contact service provider' t='200'/>
+	<item txt='Loading Audio Drivers' t='250' repeat='0' />
+	<item txt='[ ERROR ] Audio Drivers Not Found' t='250'  repeat='4'/>
+	<item txt='[ FAILURE ] Failed to load Audio Drives, continuing' t='250' repeat='0' />
+	<item txt='Loading Server Settings' t='250'/>
+	<item txt='[ WARNING ] Server Settings are Out of Date or Old, please contact IT' t='250'/>
+	<item txt=', Or consider complaining to your local supervisor' t='250'/>
+	<item txt='Generating GUI Enivorment' t='1500' repeat='0'/>
+	<item txt='System Firewall disabled' t='500' />
+</xml>

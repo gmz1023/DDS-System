@@ -1,0 +1,94 @@
+/* line 1, ../sass/inbox.scss */
+.txtcen {
+  text-align: center;
+}
+
+/* line 4, ../sass/inbox.scss */
+.email-container {
+  font-family: roboto-slab, serif;
+  font-weight: 400;
+  font-style: normal;
+  overflow-y: scroll !important;
+  box-sizing: border-box;
+  background-color: #fff;
+  width: 100%;
+  height: 93%;
+}
+/* line 13, ../sass/inbox.scss */
+.email-container .single {
+  width: 100%;
+}
+/* line 15, ../sass/inbox.scss */
+.email-container .single thead {
+  height: 8vh;
+}
+/* line 18, ../sass/inbox.scss */
+.email-container .single thead th {
+  border-bottom: 1px solid #d4d0c6;
+}
+/* line 20, ../sass/inbox.scss */
+.email-container .single thead th:first-child {
+  text-align: center;
+  width: 10%;
+  height: 50%;
+}
+/* line 27, ../sass/inbox.scss */
+.email-container .single tbody {
+  margin: 1vw;
+  height: 63vh;
+}
+/* line 30, ../sass/inbox.scss */
+.email-container .single tbody td {
+  height: 100%;
+  width: 100%;
+}
+/* line 31, ../sass/inbox.scss */
+.email-container .single tbody td.body {
+  padding: 3%;
+}
+/* line 36, ../sass/inbox.scss */
+.email-container .single tbody td div {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* line 41, ../sass/inbox.scss */
+.email-container .single tbody td div p {
+  line-height: 1.5rem;
+}
+/* line 48, ../sass/inbox.scss */
+.email-container .inbox {
+  margin: 0 auto;
+  overflow-y: scroll !important;
+  height: 93%;
+  box-sizing: border-box;
+  width: 100%;
+  border-collapse: collapse;
+}
+/* line 57, ../sass/inbox.scss */
+.email-container .inbox thead th {
+  position: sticky;
+  top: 0;
+  padding: 1%;
+  background: #f0f0e5;
+  color: #726f66;
+  height: 1vw;
+  text-align: center;
+  border-bottom: 1px solid #d4d0c6;
+}
+/* line 68, ../sass/inbox.scss */
+.email-container .inbox tbody {
+  overflow: scroll;
+}
+/* line 70, ../sass/inbox.scss */
+.email-container .inbox tbody td {
+  padding: 3px;
+  height: 10px;
+  text-align: center;
+  border-bottom: 1px solid #d4d0c6;
+}
+/* line 75, ../sass/inbox.scss */
+.email-container .inbox tbody td.middle {
+  text-align: left;
+}

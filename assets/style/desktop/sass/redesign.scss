@@ -1,0 +1,73 @@
+/* CSS Document */
+body {
+	font-family: sans-serif;
+	font-style: normal;
+	font-weight: 200;
+	overflow: hidden;
+}
+#welcome {
+	position:absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	background: #000;
+	width: 100vw;
+	height: 100vh;
+	z-index: 2000;
+	color: green;
+	h1 {
+		@include center-xy();
+	}
+}
+
+#start_menu {
+	display: flex;
+	flex-direction: row;
+	background-color: #c1c1c1;
+	.menu {
+			padding: 0;
+			margin: 0;
+		box-sizing: border-box;
+		display: inline-block;
+		width: 95vw;
+		overflow: hidden;
+		background-color: darkblue;
+		li {
+			padding: 0;
+			margin: 0;
+			background-color: #c1c1c1;
+			display: inline-block;
+			height: 4vh;
+			width: 10%;
+			box-sizing: border-box;
+			a {
+				text-align: center;
+				display: block;
+				width: 100%;
+				height: 100%;
+				line-height: 4vh;
+				font-size: 1rem;
+				&:hover {
+					background-color: lime;
+				}
+			}
+		}
+	}
+	.hotbar {
+		box-sizing: border-box;
+		display:inline-block;
+		width: 5vw;
+		background-color: purple;
+		overflow: hidden;
+		line-height:4vh;
+	}
+}
+#clock {
+	overflow:hidden;
+	font-size: .75rem;
+	div {
+		width: 50;
+		display:inline-block;
+	}
+	width: 10vw !important;
+}

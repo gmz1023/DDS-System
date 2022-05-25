@@ -1,0 +1,55 @@
+@import "compass/reset";
+body {
+	
+}
+#container {
+	width: 75vw;
+	margin: 0 auto;
+}
+.menu { 
+	width: 100%;
+	background-color:#333;
+	height: 4vh;
+	line-height: 4vh;
+	a {
+		padding: 2vw;
+		color: #fff;
+		font-weight: bold;
+	}
+}
+.hidden { display: none;}
+#files {
+	table {
+		margin-top:3vh;
+		width: 100%;
+		.label {
+			width: 10%;
+			border-right: 1px solid black;
+		}
+		.input {
+			input,textarea {
+				width: 100%;
+			}
+			textarea {
+				height: 10vh;
+			}
+		}
+	}
+}
+.hr {
+	margin: 20px;
+	width: 50%;
+	td {
+		padding: 5px;
+		&:first-child
+		{
+			width: 20%;
+			background-color: #313131;
+			color: #fff;
+			font-weight: bold;
+		}
+		input {
+			width: 100%;
+		}
+	}
+}

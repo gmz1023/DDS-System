@@ -1,0 +1,123 @@
+#container {
+	&.logo {
+		@include centre(both);
+		margin: 0 auto;
+	}
+	text-align: center;
+	img {
+		display:block;
+	}
+	max-width: 866px;
+	width: 100vw;
+	.logo { 
+		display: inline-block;
+		vertical-align: middle;
+	
+	}
+	.tl-body {
+		text-align: left;
+		width: 100vw;
+		height: 100%;
+		background-color:#333;
+		.upgrade_holder
+		{
+			background-color: #f1f1f1;
+			width: 100vw;
+			display: inline-block;
+			float: left;
+			.upgrade {
+				border: 1px solid black;
+				width:50%;
+				background-color:#f1f1f1;
+				div { 
+					padding: 1vw;
+					box-sizing: border-box;
+				}
+				.name {
+					font-size: 125%;
+					width: 100%;
+					background-color:aliceblue;
+					
+				}
+				.desc
+				{
+					
+				}
+				.meta {
+					background-color:#666;
+					padding: 0vw;
+					text-align: right;
+					
+				}
+			}
+		}
+		.live {
+			display:inline-block;
+			video{
+				width: 30vw;
+			}
+			.console
+			{
+				background-color:#fff;
+				height: 40vh;
+				max-width: 30vw;
+			}
+		}
+	}
+	.tl-body {
+		box-sizing: content-box;
+		background-color: #fff;
+		.short {
+			p {
+				text-align: left;
+				padding: 2vh;
+			}
+			width: 30vw;
+			@include centre('both');
+		}
+		a {
+			color: #000;
+			&:visited { color: #000 !important;}
+		}
+		
+	}
+	.tl-menu {
+		width: 100vw;
+		background-color:#333 !important;
+		border-bottom: 1px solid white;
+		.tl-link {
+			margin: 0 1vw 0 0;
+
+		}
+		a {
+			color: #fff;
+			text-decoration: none;
+			display:inline-block;
+			padding: 1vh;
+			border: 1px solid white;
+			&:hover { 
+				background-color:#fff;
+				color: #000;
+				border-color: #000;
+			}
+			&.disabled {
+				pointer-events: none;
+				&:hover { 
+					pointer-events: none;
+				background-color:#000;}
+			}
+		}
+	}
+	.tl-title {
+		text-align:center !important;
+		background-color:#333;
+		width: 100vw;
+		h1 {
+			margin:0;
+			padding:1vh;
+			color:#fff;
+			font-size: 110%;
+			}
+	}
+}
+

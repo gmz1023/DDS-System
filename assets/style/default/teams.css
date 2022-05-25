@@ -1,0 +1,48 @@
+html, body, div {
+  margin: 0;
+  padding: 0; }
+
+#container {
+  width: 85%;
+  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%); }
+
+header {
+  margin: 0;
+  padding: 0; }
+  header h1 {
+    margin: 0;
+    padding: 0; }
+
+.panels {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 25vw);
+  grid-gap: 10px;
+  justify-content: center;
+  align-content: end; }
+  .panels .panel {
+    text-align: center;
+    background-color: #c1c1c1;
+    padding: 20px; }
+    .panels .panel h1 {
+      margin: 0;
+      padding: 0; }
+    .panels .panel.inbox {
+      grid-column: 4 / 1; }
+    .panels .panel.search {
+      grid-column: 4 / 1; }
+      .panels .panel.search ul {
+        display: block;
+        list-style: none;
+        text-align: left; }
+
+header.teams {
+  background-color: #333;
+  color: #fff; }

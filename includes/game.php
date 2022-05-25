@@ -1,0 +1,8 @@
+<?php
+/* 
+
+	ASLO GAME SETTINGS
+
+*/
+
+?>

@@ -1,0 +1,13 @@
+@mixin center-xy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.placeholder {
+	@include center-xy;
+	img {
+		display: block;
+	}
+	text-align:center;
+}

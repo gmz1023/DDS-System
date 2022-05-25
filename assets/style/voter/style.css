@@ -1,0 +1,32 @@
+html, div, body, p {
+  margin: 0;
+  padding: 0; }
+
+#container {
+  width: 100%; }
+  #container .info {
+    float: left;
+    width: 100vw;
+    background-color: #20A89E;
+    padding: 1em; }
+
+.stats {
+  height: 3vh;
+  line-height: 3vh;
+  border: 1px solid black;
+  display: flex; }
+  .stats .var {
+    flex: 1; }
+
+.contwo {
+  width: 75%;
+  margin: 0 auto; }
+
+.uphold {
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
+  .uphold .upgrade {
+    padding: 1em;
+    flex: 2;
+    border-bottom: 1px solid grey; }

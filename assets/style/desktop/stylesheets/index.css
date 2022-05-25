@@ -1,0 +1,12 @@
+/* line 7, ../sass/index.scss */
+.placeholder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+/* line 9, ../sass/index.scss */
+.placeholder img {
+  display: block;
+}

@@ -1,0 +1,81 @@
+.txtcen {
+	text-align: center;
+}
+.email-container {
+	font-family: roboto-slab, serif;
+	font-weight: 400;
+	font-style: normal;
+	overflow-y: scroll !important;
+	box-sizing: border-box;
+	background-color: #fff;
+	width:max(100%);
+	height: max(93%);
+	.single {
+		width: 100%;
+		thead {
+			height: 8vh;
+
+			th {
+				border-bottom: 1px solid #d4d0c6;
+				&:first-child{
+					text-align: center;
+					width: 10%;
+					height: 50%;
+				}
+			}
+		}
+		tbody {
+			margin: 1vw;
+			height: min(63vh);
+			td {
+				&.body {
+					padding: 3%;
+				}
+				height: 100%;
+				width: 100%;
+				div {
+					position:relative;
+					display: block;
+					width: 100%;
+					height: 100%;
+					p {
+						line-height: 1.5rem;
+					}
+				}
+			}
+		}
+	}
+	.inbox {
+
+		margin: 0 auto;
+		overflow-y: scroll !important; 
+		height: max(93%);
+		box-sizing: border-box;
+		width: max(100%);
+		border-collapse: collapse;
+		thead {
+		th {
+			position:sticky;
+			top: 0;
+			padding: 1%;
+			background: #f0f0e5;
+			color: #726f66;
+			height: 1vw;
+			text-align: center;
+			border-bottom: 1px solid #d4d0c6;
+		}
+		}
+		tbody{
+			overflow:scroll;
+			td {
+				padding: 3px;
+				height: 10px;
+				text-align: center;
+				border-bottom: 1px solid #d4d0c6;
+				&.middle {
+					text-align:left;
+				}
+			}
+		}
+	}
+}

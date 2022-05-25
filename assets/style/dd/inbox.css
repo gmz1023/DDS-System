@@ -1,0 +1,42 @@
+.email {
+  background-color: #f1f1f1;
+  width: 45vw;
+  float: left;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+  .email .header {
+    background-color: #FFF4aa; }
+    .email .header h1 {
+      margin: 0;
+      text-indent: 1vw;
+      font-size: 3vh;
+      padding: 0; }
+
+#inbox {
+  font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+  width: 100%; }
+  #inbox table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left; }
+    #inbox table thead {
+      background-color: #fff;
+      border-bottom: 1px solid black; }
+    #inbox table tbody tr:nth-child(even) {
+      background-color: #fff; }
+
+.emenu {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  width: 15vw;
+  font-size: 2vh;
+  padding: 1vh;
+  text-align: center; }
+  .emenu a {
+    border-bottom: 1px solid black;
+    display: block; }
+    .emenu a:nth-child(odd) {
+      border-top: 1px solid black; }

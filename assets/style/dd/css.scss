@@ -1,0 +1,112 @@
+/* CSS Document */
+@mixin centre($axis: "both"){
+    position:absolute;
+    @if $axis == "y"{
+        top:50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    @if $axis == "x"{
+        left:50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    @if $axis == "both"{
+        top:50%;
+        left:50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }   
+}
+@import 'body.scss';
+@import 'upgrade.scss';
+@import 'TimeCircles.scss';
+@import 'inbox.scss';
+html,body {
+	
+	font-size: 1.5vh;
+	margin: 0;
+	padding: 0;
+	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	.login {
+		background:url("/assets/imgs/webb-dark.png"), repeat;
+	}
+}
+
+#console {  	
+	font: 1.3rem Inconsolata, monospace;
+	@include centre("both");
+	.loading {
+		@include centre("both");
+	}
+    text-align: left;
+    padding: 10px;
+    background: #fff;
+    height: 300px;
+    width: 70vw;
+    border: 1px solid #a7a7a7;
+    overflow: auto;
+    border-radius: 4px;
+    border-bottom: 4px solid #a7a7a7;
+	.msg {
+		display:block;	
+		padding: 0;
+		box-sizing: border-box;
+		&:nth-child(odd) { 
+			background-color:#f1f1f1;
+			border-bottom: 1px solid black;
+			border-top: 1px dashed black;
+		}
+		.date,.body { display:inline-block;}
+		.date {
+			width: 19% !important;
+			
+		}
+		.body {
+			margin-left: 1vh;
+		}
+	}
+}
+//* DD STYLE
+.dd_submit
+{
+	width: 15vw !important;
+	outline: dotted;
+	outline-color: #333;
+	margin: 1vh 0 1vh 0;
+	border: 1px double #333;
+}
+.dd_login
+{
+	@include centre("both");
+	background-color: #111;
+	width: 20vw;
+	border: 2px inset #ccc;
+	box-shadow: 0px 0 10px 15px #111;
+
+	table {
+		width: 100%;
+		th {
+			color:#fff;
+			}
+	}
+	input {
+		box-sizing: border-box;
+		width: 15vw;
+	}
+	padding: 1vh 0 4vh 0;
+}
+.el-bord{
+	/* We're picking out a colour from the background image we're using but you can use any colour you'd like */
+	border-size: calc(100%+1px);
+	border-style: groove;
+}
