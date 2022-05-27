@@ -13,10 +13,6 @@ else
 	//do nothing
 }
 $sql = "SELECT * FROM console ";
-#$sql .= "WHERE ";
-#$sql .= "date < now() ";
-#$sql .= "AND ";
-#$sql .= "date <= NOW() - INTERVAL 1 MONTH "; 
 $sql .=	"ORDER BY date ASC";
 $que = $db->prepare($sql);
 try { 
@@ -35,12 +31,9 @@ try {
 		{
 			$text = $row['body'];
 		}
-	 	$html .= "<div class='msg'>";
-		$html .= "<div class='date'>{$date}</div>";
-
-		$html .= "<div class='body'>{$text}</div>";
-		$html .= "</div>";
+		$array[] = array('msg'=>$text,'date'=>$date);
 	}
+	$html = json_encode($array);
 
 }catch(PDOException $e) { die($e->getMessage()); }
 	echo $html;

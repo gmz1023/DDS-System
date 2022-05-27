@@ -16,8 +16,9 @@ class upgrades extends ai
 		}
 		else
 		{
-		$sql = "SELECT floor(sum(status)/count(status)) as status FROM subsystem WHERE sub_id IN ({$sid})";
-		$que = $this->db->prepare($sql);
+			$sql = "SELECT floor(sum(status)/count(status)) as status FROM subsystem WHERE sub_id = :sid";
+			$que = $this->db->prepare($sql);
+			$que->bindParam(':sid',$sid);
 		try { 
 			$que->execute();
 			$row = $que->fetch(PDO::FETCH_ASSOC);
@@ -140,6 +141,12 @@ class upgrades extends ai
 			
 			 }catch(PDOException $e) { die($e->getMessage());}
 	}
+	function isParentEnabled($sid)
+	{
+		$sql = "SELECT status FROM subsystem WHERE sid = :sid";
+		$que = $this->db->prepare($sql);
+		$que->bindParam(':sid');
+	}
 	function getUpgrades()
 	{
 		/*
@@ -165,7 +172,10 @@ class upgrades extends ai
 					AND
 					date_available <= NOW())
 					AND
-					((SELECT setting_value FROM settings WHERE setting_name = 'restarted' LIMIT 1) <= s.linger OR s.linger = 0)
+					((SELECT sum(status) FROM subsystem WHERE sub_id IN (s.requires)) >= (SELECT count(sub_id) FROM subsystem WHERE sub_id IN (s.requires)) OR s.requires = 0)
+					AND
+					((SELECT status FROM subsystem WHERE sub_id IN (s.disallow)) <= 0 OR s.disallow = 0)
+
 					";
 		$que = $this->db->prepare($sql);
 		try { 
@@ -176,17 +186,10 @@ class upgrades extends ai
 			{
 				if(count($row) == 0)
 				{
-					
+			
 				}
 				else{
-					$va = $this->NumberOfVotes($row['sub_id']);
-					$en = $this->is_sys_enabled($row['requires']);
-					$ds = $this->is_sys_enabled($row['disallow']);
-					if($en == 0 || $ds == 1)
-					{
-					}
-					else
-					{
+
 					$disabled = $this->hasAlreadyVoted($row['sub_id'],$_SESSION['uid']) <> 0 ? 'disabled' : 'enabled';
 
 						$html .= "<div class='upgrade'>";
@@ -203,7 +206,7 @@ class upgrades extends ai
 						$html .= "</div>";				
 						$html .= "</div>";
 					}
-				}
+	
 			}
 			if(strlen($html) == 0)
 			{

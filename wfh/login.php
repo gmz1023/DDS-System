@@ -20,7 +20,7 @@ else
 				echo false;
 			}
 			else{$row = $que->fetch(PDO::FETCH_ASSOC);
-			if($_POST['password'] == $row['password'])
+			if(password_verify($_POST['password'],$row['password']))
 			{
 				$_SESSION['uid'] = $row['uid'];
 				$_SESSION['sl']  = $row['security_level'];

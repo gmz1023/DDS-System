@@ -13,7 +13,10 @@ switch(LIVE)
 	define("DB_NAME", "aslo2");
 		break;
 	case "live":
-		// Removed For Security
+		define("DB_HOST", 'localhost');
+		define("DB_USER", 'terrible_lie');
+		define("DB_PASS", '1j2F94wSY!oa');
+		define("DB_NAME", "aslo2");
 		break;
 }
 //Old Aslo Site Required Constants
